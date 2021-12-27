@@ -42,7 +42,7 @@ public class MainSV extends javax.swing.JFrame {
         initComponents();
         
         
-        setIconImage(new ImageIcon(getClass().getResource("/icon/thoat_1.png")).getImage());
+        setIconImage(new ImageIcon(getClass().getResource("/icon/thoat_1.jpg")).getImage());
         
         setUser();
         Timer dongho = new Timer(1000, new ActionListener() {
@@ -85,13 +85,13 @@ public class MainSV extends javax.swing.JFrame {
         thongBaoMatKhau = new javax.swing.JLabel();
         jtpContent = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
         jMenuBar2 = new javax.swing.JMenuBar();
         jmHeThong = new javax.swing.JMenu();
         jmidoimatkhau = new javax.swing.JMenuItem();
         jmiLogOff = new javax.swing.JMenuItem();
         jmiExit = new javax.swing.JMenuItem();
-        xemlichhoc = new javax.swing.JMenu();
+        LichHoc = new javax.swing.JMenu();
 
         jMenuItem3.setText("jMenuItem3");
 
@@ -181,7 +181,7 @@ public class MainSV extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(thongBaoMatKhau, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jtpContent.setMinimumSize(new java.awt.Dimension(1106, 638));
@@ -190,33 +190,17 @@ public class MainSV extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(43, 122, 121));
         jPanel6.setForeground(new java.awt.Color(255, 255, 255));
 
-        jPanel1.setBorder(new javax.swing.border.MatteBorder(new javax.swing.ImageIcon(getClass().getResource("/icon/sinhvien.jpg")))); // NOI18N
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 987, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 215, Short.MAX_VALUE)
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/it1.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 59, Short.MAX_VALUE))
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jtpContent.addTab("Trang Chủ", jPanel6);
@@ -266,16 +250,21 @@ public class MainSV extends javax.swing.JFrame {
 
         jMenuBar2.add(jmHeThong);
 
-        xemlichhoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/xemlichday.png"))); // NOI18N
-        xemlichhoc.setText("Xem Lịch Học");
-        xemlichhoc.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        xemlichhoc.setPreferredSize(new java.awt.Dimension(145, 32));
-        xemlichhoc.addMouseListener(new java.awt.event.MouseAdapter() {
+        LichHoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/xemlichday.png"))); // NOI18N
+        LichHoc.setText("Lịch Học");
+        LichHoc.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        LichHoc.setPreferredSize(new java.awt.Dimension(145, 32));
+        LichHoc.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                xemlichhocMouseClicked(evt);
+                LichHocMouseClicked(evt);
             }
         });
-        jMenuBar2.add(xemlichhoc);
+        LichHoc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LichHocActionPerformed(evt);
+            }
+        });
+        jMenuBar2.add(LichHoc);
 
         setJMenuBar(jMenuBar2);
 
@@ -289,14 +278,14 @@ public class MainSV extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jtpContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jtpContent, javax.swing.GroupLayout.DEFAULT_SIZE, 656, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jtpContent.getAccessibleContext().setAccessibleName("Trang Chủ");
 
-        setSize(new java.awt.Dimension(1316, 659));
+        setSize(new java.awt.Dimension(1316, 799));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -315,9 +304,9 @@ public class MainSV extends javax.swing.JFrame {
            ld.show();
     }//GEN-LAST:event_jmidoimatkhauActionPerformed
 
-    private void xemlichhocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xemlichhocMouseClicked
+    private void LichHocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LichHocMouseClicked
 
-    }//GEN-LAST:event_xemlichhocMouseClicked
+    }//GEN-LAST:event_LichHocMouseClicked
 
     private void jtfCurrentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCurrentActionPerformed
         // TODO add your handling code here:
@@ -326,6 +315,12 @@ public class MainSV extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
        this.setExtendedState(this.getExtendedState()|JFrame.MAXIMIZED_BOTH);
     }//GEN-LAST:event_formWindowOpened
+
+    private void LichHocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LichHocActionPerformed
+       // frmLichHoc fLichHoc = new frmLichHoc ();
+         //   fLichHoc.setVisible (true);
+           // jDesktopPane1.add(fLichHoc);
+    }//GEN-LAST:event_LichHocActionPerformed
 
     /**
      * @param args the command line arguments
@@ -356,13 +351,14 @@ public class MainSV extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu LichHoc;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JLabel jlbToday;
@@ -374,6 +370,5 @@ public class MainSV extends javax.swing.JFrame {
     private javax.swing.JTextField jtfCurrent;
     private javax.swing.JTabbedPane jtpContent;
     private javax.swing.JLabel thongBaoMatKhau;
-    private javax.swing.JMenu xemlichhoc;
     // End of variables declaration//GEN-END:variables
 }

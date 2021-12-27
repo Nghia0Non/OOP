@@ -103,7 +103,7 @@ public class SinhVienDAO implements ISinhVienDAO {
                 ps.setString(7, sv.getDiaChi());
                 ps.setString(8, sv.getSdt());
                 ps.setString(9,sv.getMaSV());
-                ps.setString(10, "123456");                               
+                ps.setString(10, "1");                               
                 int row = ps.executeUpdate();
                 if (row < 1) {
                     sv = null;

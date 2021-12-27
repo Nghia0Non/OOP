@@ -33,7 +33,7 @@ public class Login extends javax.swing.JFrame {
        
         initComponents();
         
-        setIconImage(new ImageIcon(getClass().getResource("/icon/thoat_1.png")).getImage());
+        setIconImage(new ImageIcon(getClass().getResource("/icon/thoat_1.jpg")).getImage());
         
     }
 
@@ -199,7 +199,7 @@ public class Login extends javax.swing.JFrame {
                         
                         nameLogin = username;
                         if(password.equals("admin"))
-                            thongBaoMatKhau="Cảnh Báo : Mật Khẩu của bạn hiện đang là mật khẩu mặc định (123456 hoặc 654321) ! Vui lòng đổi mật khẩu mới !";
+                            thongBaoMatKhau="Cảnh Báo : Mật Khẩu của bạn hiện đang là mật khẩu mặc định 1! Vui lòng đổi mật khẩu mới !";
                         new MainAdmin().setVisible(true);
                         dispose();
                         break;
@@ -210,7 +210,7 @@ public class Login extends javax.swing.JFrame {
                         nameLogin = username;
                         
                             
-                        if(password.equals("123456")||password.equals("654321"))
+                        if(password.equals("1")||password.equals("12"))
                             thongBaoMatKhau="Cảnh Báo : Mật Khẩu của bạn hiện đang là mật khẩu mặc định ! Vui lòng đổi mật khẩu mới !";
                         new MainSV().setVisible(true);
                         dispose();
@@ -223,7 +223,7 @@ public class Login extends javax.swing.JFrame {
                         nameLogin = username;
                         
                        
-                        if(password.equals("654321")||password.equals("123456"))
+                        if(password.equals("1")||password.equals("12"))
                             thongBaoMatKhau="Cảnh Báo : Mật Khẩu của bạn hiện đang là mật khẩu mặc định ! Vui lòng đổi mật khẩu mới !";
                         new MainGV().setVisible(true);
                         dispose();
