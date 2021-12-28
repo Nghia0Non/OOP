@@ -57,6 +57,7 @@ public class DoiMatKhau extends javax.swing.JFrame {
         txtmatkhaumoi = new javax.swing.JPasswordField();
         txtmatkhaucu = new javax.swing.JPasswordField();
         jPanel1 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Đổi Mật Khẩu");
@@ -126,7 +127,11 @@ public class DoiMatKhau extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 84, 109));
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 370, 280);
+        jPanel1.setBounds(0, 0, 360, 280);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/huss1.jpg"))); // NOI18N
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(360, 40, 100, 120);
 
         pack();
         setLocationRelativeTo(null);
@@ -280,6 +285,7 @@ public ArrayList<NguoiDung> findNguoiDung(String TenDangNhap) {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jbdangnhap;
     private javax.swing.JButton jbthoat;

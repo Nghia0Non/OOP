@@ -5,7 +5,9 @@
         <group>
             <file>file:/C:/documents/NetBeansProjects/OOP/src/GUI/MainGV.java</file>
             <file>file:/C:/documents/NetBeansProjects/OOP/src/Entity/Khoa.java</file>
+            <file>file:/C:/documents/NetBeansProjects/OOP/src/GUI/MainSV.java</file>
             <file>file:/C:/documents/NetBeansProjects/OOP/src/ConnectDatabase/DBConnect.java</file>
+            <file>file:/C:/documents/NetBeansProjects/OOP/src/GUI/frmQuanLyChuyenNganh.java</file>
             <file>file:/C:/documents/NetBeansProjects/OOP/src/BLL/ChuyenNganhDAO.java</file>
             <file>file:/C:/documents/NetBeansProjects/OOP/src/BLL/GiaoVienDAO.java</file>
             <file>file:/C:/documents/NetBeansProjects/OOP/src/GUI/Login.java</file>
@@ -14,10 +16,13 @@
             <file>file:/C:/documents/NetBeansProjects/OOP/src/BLL/HocPhanDAO.java</file>
             <file>file:/C:/documents/NetBeansProjects/OOP/src/GUI/DoiMatKhau.java</file>
             <file>file:/C:/documents/NetBeansProjects/OOP/src/GUI/MainAdmin.java</file>
+            <file>file:/C:/documents/NetBeansProjects/OOP/src/GUI/frmQuanLyMonHoc.java</file>
+            <file>file:/C:/documents/NetBeansProjects/OOP/src/GUI/frmLichHoc.java</file>
             <file>file:/C:/documents/NetBeansProjects/OOP/src/Entity/TimKiem.java</file>
             <file>file:/C:/documents/NetBeansProjects/OOP/src/GUI/frmQuanLyLopHocPhan.java</file>
             <file>file:/C:/documents/NetBeansProjects/OOP/src/Check/Check.java</file>
             <file>file:/C:/documents/NetBeansProjects/OOP/src/Entity/GiaoVien.java</file>
+            <file>file:/C:/documents/NetBeansProjects/OOP/src/GUI/TimKiem.java</file>
             <file>file:/C:/documents/NetBeansProjects/OOP/src/Entity/NguoiDung.java</file>
         </group>
     </open-files>

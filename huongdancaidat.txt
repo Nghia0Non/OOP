@@ -1,5 +1,0 @@
-﻿Chương trình Quản Lý Hệ Thống Đăng Ký Học Phần
-1. Import DataQLDKHP_MSSQL2014.sql vào Microsoft SQL 
-2. Mở file DBconnect.java sửa user và password cho đúng với MSSQL đang dùng
-3. Import project vào netbeans và Run .
-Cảm ơn bạn đã đọc !

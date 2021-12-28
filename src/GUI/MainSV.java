@@ -32,6 +32,7 @@ public class MainSV extends javax.swing.JFrame {
     Locale local = new Locale("vi", "VI");
     DateFormat d = DateFormat.getDateInstance(DateFormat.MEDIUM, local);
     public String date = d.format(today);
+    private Object jDesktopPane1;
 
     /**
      * Creates new form Main
@@ -92,6 +93,7 @@ public class MainSV extends javax.swing.JFrame {
         jmiLogOff = new javax.swing.JMenuItem();
         jmiExit = new javax.swing.JMenuItem();
         LichHoc = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         jMenuItem3.setText("jMenuItem3");
 
@@ -264,6 +266,15 @@ public class MainSV extends javax.swing.JFrame {
                 LichHocActionPerformed(evt);
             }
         });
+
+        jMenuItem2.setText("Lịch");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        LichHoc.add(jMenuItem2);
+
         jMenuBar2.add(LichHoc);
 
         setJMenuBar(jMenuBar2);
@@ -317,10 +328,17 @@ public class MainSV extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void LichHocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LichHocActionPerformed
-       // frmLichHoc fLichHoc = new frmLichHoc ();
-         //   fLichHoc.setVisible (true);
-           // jDesktopPane1.add(fLichHoc);
+       //frmLichHoc fLichHoc = new frmLichHoc();
+       //fLichHoc.setVisible(true);
+       // jDesktopPane1.add(fLichHoc);
     }//GEN-LAST:event_LichHocActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        frmLichHoc g=new frmLichHoc();
+        g.setVisible(true);
+        dispose();
+
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -358,6 +376,7 @@ public class MainSV extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel6;
