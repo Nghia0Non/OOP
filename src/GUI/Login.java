@@ -97,9 +97,15 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jbthoat, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 110, 30));
 
         jUsername.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jUsername.setText("Nhập mã giảng viên hoặc sinh viên");
         jUsername.setToolTipText("");
         jUsername.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(37, 64, 91), 3, true));
         jUsername.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jUsername.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jUsernameMouseClicked(evt);
+            }
+        });
         jUsername.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jUsernameKeyReleased(evt);
@@ -108,7 +114,13 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 230, 40));
 
         jPassword.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jPassword.setText("Nhập mật khẩu");
         jPassword.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(37, 64, 91), 3, true));
+        jPassword.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPasswordMouseClicked(evt);
+            }
+        });
         jPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordActionPerformed(evt);
@@ -128,11 +140,11 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 40, 40));
 
         jPanel1.setBackground(new java.awt.Color(51, 84, 109));
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 270));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 410, 50));
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/huss1.jpg"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 100, 130));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 100, 130));
 
         pack();
         setLocationRelativeTo(null);
@@ -170,6 +182,14 @@ public class Login extends javax.swing.JFrame {
     private void jPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordActionPerformed
+
+    private void jUsernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jUsernameMouseClicked
+        this.jUsername.setText("");
+    }//GEN-LAST:event_jUsernameMouseClicked
+
+    private void jPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordMouseClicked
+        this.jPassword.setText("");
+    }//GEN-LAST:event_jPasswordMouseClicked
 /*Code Here*/
      public static String nameLogin = "";
      public static String thongBaoMatKhau = "";
